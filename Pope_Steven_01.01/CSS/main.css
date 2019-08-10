@@ -1,0 +1,49 @@
+body{
+    color: #fff;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+h2,form,ul{
+    text-align: center;
+}
+button{
+    height: 40px;
+    width: 70px;
+}
+main{
+    background-color: rgba(0,0,0,.7);
+    margin: auto;
+    width: 50%;
+    border: 3px solid white;
+    padding: 10px;
+    margin-top: 50px;
+   
+}
+li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+ul{
+    margin-bottom: 7%;
+}
+
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+label{
+    padding: 3px;
+}
+.container{
+    
+   
+}
+div{
+    display: block;
+}
