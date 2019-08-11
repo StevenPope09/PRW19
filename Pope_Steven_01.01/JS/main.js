@@ -1,27 +1,31 @@
 // create some variables for grabbing data we need
 const addItems = document.querySelector('.addItems');
 const itemsList = document.querySelector(".groceries");
-const items = JSON.parse(localStorage.getItem('items')) || [];
+let items = JSON.parse(localStorage.getItem('items')) || [];
 
 //console.log(addItmes);
 //display list items
+console.log(items);
 getList = (groceries = [], myList) => {
     myList.innerHTML = groceries.map((food, i) => {
         return `
         <li>
         <label for="item${i}">${food.gName}</label>
         <label>${food.gPrice}</label>
-        <button type="submit" onclick="deleteItem(this)">Delete</button>
+        <button type="submit" onclick="deleteItem(${i})">Delete</button>
         </li> 
         `;
     }).join('');
 };
 getList(items, itemsList);
-console.log(getList);
 
-deleteItem = (items, i) =>{
-    console.log("clicked");
-    delete items[i];
+
+deleteItem = (index) =>{
+
+    items.splice(index,1);
+    localStorage.setItem('items', JSON.stringify(items));
+    getList(items,itemsList);
+    
 }
 
 
