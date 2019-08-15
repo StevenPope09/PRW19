@@ -13,9 +13,9 @@ const MyBtn = props => {
 
 const styles= {
     myBtn: {
-        padding: '3%',
+        padding: '1%',
         color: 'rgb(163,173,194)',
-        margin: '5%',
+        margin: '2%',
         fontSize: '1.23em',
         fontWeight: 'bold',
         cursor: 'pointer',
