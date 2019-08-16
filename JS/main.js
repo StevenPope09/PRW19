@@ -1,3 +1,5 @@
+//This file looks good.
+
 // create some variables for grabbing data we need
 const addItems = document.querySelector('.addItems');
 const itemsList = document.querySelector(".groceries");
