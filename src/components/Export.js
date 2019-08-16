@@ -19,3 +19,5 @@ export default class Exports extends Component {
  to expand on this single component and add 5 others? That's where we would look to utilize our Exports, that way in our 
  App.js we could add a simple render() and add our <Exports /> and render all of all components and make for easy reusabilty.
  */
+
+ //Very good!!

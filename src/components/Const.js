@@ -20,3 +20,5 @@ export default Consts;
  with the const element I created instead of seeing Current Student: and a input for the name we
  would simply see Hello World! because our App.js is rendering our const.
  */
+
+ //Good.  Const are great for buttons, forms, headers, etc.
