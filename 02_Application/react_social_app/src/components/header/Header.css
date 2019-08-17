@@ -1,0 +1,9 @@
+.header{
+    /* /* display: 'flex',
+        flexDirection: 'row',
+        color: 'black' */
+        display: flex;
+        flex-direction: row;
+        color: black;
+         
+} 
