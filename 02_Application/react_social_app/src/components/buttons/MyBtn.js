@@ -5,21 +5,26 @@ import React from 'react';
 //Dummy Components
 const MyBtn = props => {
     return (
-        <button className="prtyBtn" style={styles.myBtn}>
+        <button onClick={props.onClick} className="prtyBtn" style={styles.myBtn}>
             {props.btnText}
         </button>
     )
 }
 
-const styles= {
+const styles = {
     myBtn: {
-        padding: '1%',
-        color: 'rgb(163,173,194)',
-        margin: '2%',
-        fontSize: '1.23em',
-        fontWeight: 'bold',
+        
+        color: 'black',
+        marginLeft: '.5%',
+        fontSize: '1.5em',     
         cursor: 'pointer',
-        borderRadius: '10%'
+        width: '8%',
+        height: '40px'
+        
+        
+
+
+
     }
 }
 
