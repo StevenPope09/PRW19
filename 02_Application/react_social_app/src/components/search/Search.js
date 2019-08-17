@@ -31,7 +31,7 @@ const styles = {
         marginTop: '1%',
         marginBottom: '5%',
         color: 'rgb(163,173,194)',
-
+        border: '5px soild black'
 
     },
     // searchBar: {
@@ -42,7 +42,8 @@ const styles = {
         height: '35px',
         width: '40%',
         marginLeft: '27%',
-        fontSize: '1.0em'
+        fontSize: '1.0em',
+        
     },
 
 

@@ -19,7 +19,8 @@ const styles = {
         fontSize: '1.5em',     
         cursor: 'pointer',
         width: '8%',
-        height: '40px'
+        height: '40px',
+        fontFamily: 'Times New Roman, Times, serif'
         
         
 

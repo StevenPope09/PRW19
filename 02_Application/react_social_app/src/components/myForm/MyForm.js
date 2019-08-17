@@ -70,7 +70,8 @@ const styles = {
         color: 'rgb(163,173,194)',
         display: 'flex',
         flexDirection: 'column',
-        marginLeft: '20%'
+        marginLeft: '20%',
+        fontFamily: 'Times New Roman, Times, serif' 
     },
     mind: {
         color: 'black',
@@ -79,10 +80,13 @@ const styles = {
     input: {
         height: '75px',
         width: '100%',
-        fontSize: '1.50em'
+        fontSize: '1.50em',
+        fontFamily: 'Times New Roman, Times, serif'
+
     },
     typing: {
-        color: 'rgba(0,0,0,.5)'
+        color: 'rgba(0,0,0,.5)',
+        fontFamily: 'Times New Roman, Times, serif'
     }
     
 }

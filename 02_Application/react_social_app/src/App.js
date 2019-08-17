@@ -95,8 +95,6 @@ const styles = {
     backgroundColor: '#FFFFFF',
     clear: 'both'
   },
-  span: {
-    backgroundColor: 'red'
-  }
+  
 
 }
