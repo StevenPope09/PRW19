@@ -1,6 +1,6 @@
 import React from 'react';
 import MyBtn from '../buttons/MyBtn';
-import { FaTimes, FaBlackTie } from 'react-icons/fa';
+import { FaTimes, FaThumbsUp, FaComment, FaShare } from 'react-icons/fa';
 
 
 class Post extends React.Component {
@@ -22,11 +22,11 @@ class Post extends React.Component {
                     <img style={styles.image} src={this.props.postImage}/>
                 </span>
                 <span style={styles.feedback}>
-                    <p style={styles.pTag}>Like</p>
+                    <p style={styles.pTag}><FaThumbsUp /> Like</p>
                     <p style={styles.pTag}>|</p>
-                    <p style={styles.pTag}>Comment</p>
+                    <p style={styles.pTag}><FaComment /> Comment</p>
                     <p style={styles.pTag}>|</p>
-                    <p style={styles.pTag}>Share</p>
+                    <p style={styles.pTag}><FaShare /> Share</p>
                 </span>
 
             </div>
@@ -64,7 +64,8 @@ const styles = {
         color: 'rgb(163,173,194)',
         display: 'flex',
         flexDirection: 'column',
-        marginLeft: '20%'
+        marginLeft: '20%',
+        fontFamily: 'Times New Roman, Times, serif'
     },
     button: {
         marginLeft: '1%',
