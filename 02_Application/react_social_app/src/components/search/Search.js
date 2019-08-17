@@ -1,15 +1,25 @@
 import React from 'react';
 import MyBtn from '../buttons/MyBtn';
+import { FaSearch } from 'react-icons/fa';
 
 const Search = props => {
+    // console.log(props);
     return (
-        <form 
+        <form
             style={styles.searchForm}
             onSubmit={props.searchMe}>
-            <input 
-                style={styles.input}
-                placeholder="Search..." />
-            <MyBtn btnText="Search" />
+            <div style={styles.searchBar}>
+                <div>
+                    <input
+                        value={props.search}
+                        onChange={props.onSearchChange}
+                        style={styles.input}
+                        placeholder="Search..." />
+                    <MyBtn btnText={<FaSearch />} />
+                </div>
+
+            </div>
+
         </form>
     )
 }
@@ -18,10 +28,22 @@ export default Search
 
 const styles = {
     searchForm: {
-        padding: '1%',
-        backgroundColor: 'rgba(163,173,194,0.5)',
+        marginTop: '1%',
+        marginBottom: '5%',
         color: 'rgb(163,173,194)',
-        
-    }
-    
+
+
+    },
+    // searchBar: {
+    //     display: 'flex',
+    //    justifyContent: 'right'
+    // },
+    input: {
+        height: '35px',
+        width: '40%',
+        marginLeft: '27%',
+        fontSize: '1.0em'
+    },
+
+
 }
