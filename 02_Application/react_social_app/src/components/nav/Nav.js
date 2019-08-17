@@ -1,5 +1,5 @@
 import React from 'react'
-import MyBtn from '../buttons/MyBtn'
+//import MyBtn from '../buttons/MyBtn'
 
 const Nav = () => {
     return (
