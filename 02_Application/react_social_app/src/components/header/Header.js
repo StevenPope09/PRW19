@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../nav/Nav'
 import logo from '../../images/logo.png'
 import { FaCog, FaBell } from 'react-icons/fa';
+import UserImage from '../../images/UserPic.png';
 
 const Header = props => {
     return (
@@ -9,6 +10,7 @@ const Header = props => {
             <img src={logo} alt='Logo' style={styles.logo} />
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <span style={styles.headNot}>
+                <p style={styles.notify}><img src={UserImage} alt="user Picture" style={styles.userImg}/></p>
                 <p style={styles.notify}><FaBell /> </p>
                 <p style={styles.notify}><FaCog /> </p>
             </span>
@@ -28,7 +30,7 @@ const styles = {
         flexDirection: 'column',
         color: 'black',
         width: '100%',
-        backgroundColor: '#279AF1',
+        backgroundColor: '#FAE1DF',
         fontFamily: 'Times New Roman, Times, serif'
 
     },
@@ -36,7 +38,8 @@ const styles = {
         width: '100px',
         height: '110px',
         marginLeft: '1.5%',
-        marginTop: '5px'
+        marginTop: '5px',
+        cursor: 'pointer'
     },
     nav: {
         display: 'flex',
@@ -53,14 +56,20 @@ const styles = {
     },
     notify: {
         position: 'relative',
-        left: '95%',
+        left: '90%',
         top: '-180px',
         display: 'inline',
-        marginRight: '10px',
+        marginRight: '30px',
+        cursor: 'pointer'
 
     },
     headerNot: {
         display: 'flex',
         flexDirection: 'row'
+    },
+    userImg: {
+        height: '45px',
+        width: '45px',
+        cursor: 'pointer'
     }
 }
