@@ -24,7 +24,7 @@ class App extends Component {
   onSearchChange = (e) => {
     //console.log(e.target.value);
     this.setState({ search: e.target.value })
-
+    
   }
 
   getPosts = () => {
@@ -43,19 +43,26 @@ class App extends Component {
     return (
       <div style={styles.container}>
 
-        <Header pgTitle="Newton's Social Media" />
+        <Header pgTitle="Neutron Gram" />
 
         <Search searchMe={(e) => {
           e.preventDefault()
           //console.log(this.state.search);
+          if(this.state.search == ""){
+            alert("Please fill this field out before you continue")
+            return
+          }
+          
           let filteredPosts = this.state.posts.filter((post) => {
             return post.postText.indexOf(this.state.search) >= 0
 
           })
 
           this.setState({ filteredPosts })
+          
+          
         }} onSearchChange={this.onSearchChange} search={this.state.search} />
-
+        
         <MyForm onSubmit={(text, name) => {
 
           let posts = this.state.posts;
@@ -74,6 +81,7 @@ class App extends Component {
               //console.log(filteredPosts);
               this.setState({ posts: filteredPosts })
             }} />
+            
           )
         })}
 
@@ -92,8 +100,9 @@ export default App;
 const styles = {
   container: {
     display: 'block',
-    backgroundColor: '#FFFFFF',
-    clear: 'both'
+    backgroundColor: 'white',
+    
+    
   },
   
 
