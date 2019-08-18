@@ -23,9 +23,9 @@ class Post extends React.Component {
                 </span>
                 <span style={styles.feedback}>
                     <p style={styles.pTag}><FaThumbsUp /> Like</p>
-                    <p style={styles.pTag}>|</p>
-                    <p style={styles.pTag}><FaComment /> Comment</p>
-                    <p style={styles.pTag}>|</p>
+                    <p style={styles.bar}>|</p>
+                    <p style={styles.pTag}><FaComment  /> Comment</p>
+                    <p style={styles.bar}>|</p>
                     <p style={styles.pTag}><FaShare /> Share</p>
                 </span>
 
@@ -60,8 +60,8 @@ const styles = {
         width: '60%',
         margin: '1%',
         padding: '1%',
-        backgroundColor: '#9BC4BC',
-        color: 'rgb(163,173,194)',
+        backgroundColor: '#4F5165',
+        
         display: 'flex',
         flexDirection: 'column',
         marginLeft: '20%',
@@ -72,16 +72,18 @@ const styles = {
         float: 'right'
     },
     text: {
-        color: 'black',
+        color: 'white',
         height: '50px',
         width: '75%',
-        marginBottom: '20px'
+        marginBottom: '20px',
+        fontSize: '1.5em'
 
     },
     name: {
-        color: 'black',
+        color: 'white',
         fontSize: '2.0em',
-        marginBottom: '20px',
+        fontWeight: 'bold',
+        marginBottom: '40px',
         marginTop: '20px'
 
     },
@@ -98,8 +100,14 @@ const styles = {
     },
     pTag: {
         fontSize: '1.5em',
-        color: 'black',
+        color: 'white',
+        cursor: 'pointer'
         
-    }
+    },
+    bar: {
+        fontSize: '1.5em',
+        color: 'white',
+        
+    },
 
 }
