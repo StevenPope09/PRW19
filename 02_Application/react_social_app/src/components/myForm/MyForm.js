@@ -1,6 +1,6 @@
 import React from 'react';
 import MyBtn from '../buttons/MyBtn';
-
+import UserImage from '../../images/UserPic.png';
 
 
 class MyForm extends React.Component {
@@ -11,7 +11,7 @@ class MyForm extends React.Component {
             <div style={styles.container}>
                 <form
                     style={styles.myForm}>
-                    <p style={styles.mind}>What's on your mind Steven? </p>
+                    
                     <input type='text'
                         style={styles.input}
                         name='text'
@@ -22,6 +22,7 @@ class MyForm extends React.Component {
                             console.log(text)
                         }}
                         placeholder="Create Post" />
+                        <p style={styles.mind}>What's on your mind Steven? </p>
                     <p style={styles.typing}>You are typing: {this.state.text} </p>
                     
                     <MyBtn btnText="Post" onClick={(e) => {
@@ -31,6 +32,7 @@ class MyForm extends React.Component {
                             return
                         }
                         this.props.onSubmit(this.state.text, "Steven")
+                        this.state.text = ""
                         
                     }} />
                 </form>
@@ -66,7 +68,7 @@ const styles = {
         width: '60%',
         margin: '1%',
         padding: '1%',
-        backgroundColor: 'rgba(163,173,194,0.3)',
+        backgroundColor: '#A1A6B4',
         color: 'rgb(163,173,194)',
         display: 'flex',
         flexDirection: 'column',
