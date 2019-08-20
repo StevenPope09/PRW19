@@ -7,6 +7,12 @@ import Search from './components/search/Search'
 import Image1 from './images/image1.jpg'
 import Footer from './components/footer/Footer'
 
+
+//YOU MAY WANT TO REWORK THIS SO THAT YOU HAVE MORE OF A FRAME.  THE COMPONENTS CAN BE INJECTED INTO THE CENTER SECTION. FOR WEEK 3
+
+
+//REMOVE UN-NEEDED SPACING
+
 class App extends Component {
   state = {
     posts: [
