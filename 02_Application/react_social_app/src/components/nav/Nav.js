@@ -1,14 +1,18 @@
 import React from 'react'
 //import MyBtn from '../buttons/MyBtn'
+import {NavLink} from 'react-router-dom'
 
-const Nav = () => {
-    return (
-        <nav style={styles.container}>
-            <a href="" style={styles.anchor}>News Feed</a>
-            <a href="" style={styles.anchor}>Messages</a>
-            <a href="" style={styles.anchor}>Watch</a>
-        </nav>
-    )
+
+class Nav extends React.Component {
+    render() {
+        return (
+            <nav style={styles.container}>
+                <NavLink to="/News_Feed" style={styles.anchor}>News Feed</NavLink>
+                <NavLink to="/Messages" style={styles.anchor}>Messages</NavLink>
+                <NavLink to="/Watch" style={styles.anchor}>Watch</NavLink>
+            </nav>
+        )
+    }
 }
 
 export default Nav
