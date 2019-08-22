@@ -2,10 +2,6 @@ import React from 'react';
 import MyBtn from '../buttons/MyBtn';
 import { FaSearch } from 'react-icons/fa';
 
-
-//{/*Remove spacing */}
-//Search should work on keyup for week 3
-
 const Search = props => {
     // console.log(props);
     return (

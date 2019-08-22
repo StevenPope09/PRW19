@@ -5,7 +5,6 @@ const ListItem = props => {
         <li key={props.id} style={styles.list}>
             <span>{props.val.gName}</span>
             <span>{props.val.gPrice}</span>
-            {/*Can you use your button component here? */}
             <button onClick={props.delMe}>Delete</button>
         </li>
     )
