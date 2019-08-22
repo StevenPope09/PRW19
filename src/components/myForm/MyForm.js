@@ -2,7 +2,7 @@ import React from 'react';
 import MyBtn from '../buttons/MyBtn';
 import UserImage from '../../images/UserPic.png';
 
-
+//REMOVE EXTRA SPACING
 class MyForm extends React.Component {
     state = { text: "" }
 
