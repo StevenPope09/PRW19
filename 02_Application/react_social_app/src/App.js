@@ -6,6 +6,8 @@ import uuid from 'uuid/v4'
 import Search from './components/search/Search'
 import Image1 from './images/image1.jpg'
 import Footer from './components/footer/Footer'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Main from './components/main/Main'
 
 class App extends Component {
   state = {
@@ -21,79 +23,96 @@ class App extends Component {
 
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('pList')) {
+      let pList = JSON.parse(localStorage.getItem('pList'))
+      this.setState({ posts: pList })
+    }
+  }
+
   onSearchChange = (e) => {
     //console.log(e.target.value);
     this.setState({ search: e.target.value })
-    
+
   }
 
   getPosts = () => {
     console.log(this.state);
+
     // if search exists, return filter posts
     // otherwise return original posts 
     if (this.state.filteredPosts.length > 0) {
       return this.state.filteredPosts
+
     }
     return this.state.posts
 
 
   }
 
+  //Local Storage 
+  // let pList = [...runInThisContext.state.posts]
+  //             pList.push({ pList: this.state.post })
+  //             this.setState({ pList })
+  //             localStorage.setItem('pList', JSON.stringify(pList))
+
   render() {
     return (
-      <div style={styles.container}>
+      <Router>
 
-        <Header pgTitle="Neutron Gram" />
+        <div style={styles.container}>
+          <Main />
+          <Header pgTitle="Neutron Gram" />
 
-        <Search searchMe={(e) => {
-          e.preventDefault()
-          //console.log(this.state.search);
-          if(this.state.search == ""){
-            alert("Please fill this field out before you continue")
-            return
-          }
-          
-          let filteredPosts = this.state.posts.filter((post) => {
-            return post.postText.indexOf(this.state.search) >= 0
+          <Search searchMe={(e) => {
+            e.preventDefault()
+            //console.log(this.state.search);
+            if (this.state.search == "") {
+              alert("Please fill this field out before you continue")
+              return
+            }
 
-          })
+            let filteredPosts = this.state.posts.filter((post) => {
+              return post.userName.indexOf(this.state.search) >= 0
 
-          this.setState({ filteredPosts })
-          
-          
-        }} onSearchChange={this.onSearchChange} search={this.state.search} />
-        
-        <MyForm onSubmit={(text, name) => {
+            })
 
-          let posts = this.state.posts;
-          posts.unshift({ postText: text, userName: name, id: uuid() })
-          this.setState({ posts })
-        }} />
-        {this.getPosts().map((post) => {
-          return (
-            <Post key={post.id} {...post} onDelete={(id) => {
-              //console.log(id);
-              let posts = this.state.posts
-              let filteredPosts = posts.filter((post) => {
-                return post.id !== id
+            this.setState({ filteredPosts })
 
-              })
-              //console.log(filteredPosts);
-              this.setState({ posts: filteredPosts })
-            }} />
-            
-          )
-        })}
 
-        <Footer />
+          }} onSearchChange={this.onSearchChange} search={this.state.search} />
 
-      </div>
+          <MyForm onSubmit={(text, name) => {
+
+
+            let posts = this.state.posts;
+            posts.unshift({ postText: text, userName: name, id: uuid() })
+            this.setState({ posts })
+          }} />
+          {this.getPosts().map((post) => {
+            return (
+              <Post key={post.id} {...post} onDelete={(id) => {
+                //console.log(id);
+                let posts = this.state.posts
+                let filteredPosts = posts.filter((post) => {
+                  return post.id !== id
+
+                })
+                //console.log(filteredPosts);
+                this.setState({ posts: filteredPosts })
+
+              }} />
+
+            )
+          })}
+
+          <Footer />
+
+        </div>
+      </Router>
     )
   }
-
-
 }
-
 
 export default App;
 
@@ -101,9 +120,9 @@ const styles = {
   container: {
     display: 'block',
     backgroundColor: 'white',
-    
-    
+
+
   },
-  
+
 
 }
