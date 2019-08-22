@@ -6,6 +6,9 @@ import uuid from 'uuid/v4'
 import Search from './components/search/Search'
 import Image1 from './images/image1.jpg'
 import Footer from './components/footer/Footer'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
 
 class App extends Component {
   state = {
@@ -21,23 +24,39 @@ class App extends Component {
 
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('pList')) {
+      let pList = JSON.parse(localStorage.getItem('pList'))
+      this.setState({ posts: pList })
+    }
+  }
+
   onSearchChange = (e) => {
     //console.log(e.target.value);
     this.setState({ search: e.target.value })
-    
+
   }
 
   getPosts = () => {
     console.log(this.state);
+
     // if search exists, return filter posts
     // otherwise return original posts 
     if (this.state.filteredPosts.length > 0) {
       return this.state.filteredPosts
+
     }
     return this.state.posts
 
 
   }
+  
+
+  //Local Storage 
+  // let pList = [...runInThisContext.state.posts]
+  //             pList.push({ pList: this.state.post })
+  //             this.setState({ pList })
+  //             localStorage.setItem('pList', JSON.stringify(pList))
 
   render() {
     return (
@@ -48,22 +67,23 @@ class App extends Component {
         <Search searchMe={(e) => {
           e.preventDefault()
           //console.log(this.state.search);
-          if(this.state.search == ""){
+          if (this.state.search == "") {
             alert("Please fill this field out before you continue")
             return
           }
-          
+
           let filteredPosts = this.state.posts.filter((post) => {
-            return post.postText.indexOf(this.state.search) >= 0
+            return post.userName.indexOf(this.state.search) >= 0
 
           })
 
           this.setState({ filteredPosts })
-          
-          
+
+
         }} onSearchChange={this.onSearchChange} search={this.state.search} />
-        
+
         <MyForm onSubmit={(text, name) => {
+          
 
           let posts = this.state.posts;
           posts.unshift({ postText: text, userName: name, id: uuid() })
@@ -80,8 +100,9 @@ class App extends Component {
               })
               //console.log(filteredPosts);
               this.setState({ posts: filteredPosts })
+              
             }} />
-            
+
           )
         })}
 
@@ -101,9 +122,9 @@ const styles = {
   container: {
     display: 'block',
     backgroundColor: 'white',
-    
-    
+
+
   },
-  
+
 
 }
