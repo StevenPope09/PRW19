@@ -14,12 +14,12 @@ const Header = props => {
                 <p style={styles.notify}><FaBell /> </p>
                 <p style={styles.notify}><FaCog /> </p>
             </span>
-            {/*Do you need the extra nav? */}
+
             <nav style={styles.nav}>
                 <Nav />
             </nav>
         </header>
-//{/*Remove spacing */}
+
     )
 }
 export default Header
@@ -32,7 +32,7 @@ const styles = {
         width: '100%',
         backgroundColor: '#FAE1DF',
         fontFamily: 'Times New Roman, Times, serif'
-//{/*Remove spacing */}
+
     },
     logo: {
         width: '100px',
@@ -48,7 +48,7 @@ const styles = {
         width: '100%',
         marginLeft: '1.5%',
         marginBottom: '1.5%'
-//{/*Remove spacing */}
+
     },
     h1: {
         marginLeft: '1.5%',
@@ -61,7 +61,7 @@ const styles = {
         display: 'inline',
         marginRight: '30px',
         cursor: 'pointer'
-//{/*Remove spacing */}
+
     },
     headerNot: {
         display: 'flex',
