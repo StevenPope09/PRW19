@@ -1,6 +1,6 @@
 import React from 'react';
 import MyBtn from '../buttons/MyBtn';
-import UserImage from '../../images/UserPic.png';
+//import UserImage from '../../images/UserPic.png';
 
 
 class MyForm extends React.Component {

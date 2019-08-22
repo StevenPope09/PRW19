@@ -1,5 +1,5 @@
 import React from 'react';
-import MyBtn from '../buttons/MyBtn';
+//import MyBtn from '../buttons/MyBtn';
 import { FaTimes, FaThumbsUp, FaComment, FaShare } from 'react-icons/fa';
 
 
@@ -19,7 +19,7 @@ class Post extends React.Component {
                     {this.props.postText}
                 </span>
                 <span >
-                    <img style={styles.image} src={this.props.postImage}/>
+                    <img style={styles.image} src={this.props.postImage} />
                 </span>
                 <span style={styles.feedback}>
                     <p style={styles.pTag}><FaThumbsUp /> Like</p>
