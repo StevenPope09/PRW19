@@ -1,6 +1,6 @@
 import React from 'react'
 //import MyBtn from '../buttons/MyBtn'
-
+//{/*Remove spacing */}
 const Nav = () => {
     return (
         <nav style={styles.container}>
