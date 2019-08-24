@@ -1,17 +1,36 @@
-import React from 'react'
-import Nav from '../nav/Nav'
+import React, { useState } from 'react'
 
+function Messages() {
+    const [messages, setMessages] = useState([
+        {
+            text: 'Testing',
+            userName: 'Steven'
+        },
+        {
+            text: 'Testing',
+            userName: 'Julie'
+        },
+        {
+            text: 'Testing',
+            userName: 'John'
+        },
+        {
+            text: 'Testing',
+            userName: 'William'
+        }
+    ])
 
-class Messages extends React.Component {
-    render() {
-        return (
+    return (
 
-            <section>
-                <p>Testing Messages</p>
-            </section>
+        <section>
+            <p>Testing Messages</p>
+        </section>
 
-        )
-    }
+    )
+}
+
+const styles = {
+
 }
 
 export default Messages
