@@ -18,9 +18,10 @@ const styles = {
         marginLeft: '.5%',
         fontSize: '1.5em',     
         cursor: 'pointer',
-        width: '8%',
+        width: '20%',
         height: '40px',
-        fontFamily: 'Times New Roman, Times, serif'
+        fontFamily: 'Times New Roman, Times, serif',
+        borderRadius: '40px'
         
         
 
