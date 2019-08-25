@@ -41,7 +41,7 @@ const styles = {
     input: {
         height: '35px',
         width: '40%',
-        marginLeft: '27%',
+        marginLeft: '19%',
         fontSize: '1.0em',
         
     },
