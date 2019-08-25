@@ -80,6 +80,7 @@ class NewsFeed extends Component {
         <div style={styles.container}>
 
           <MyForm onSubmit={(text, name) => {
+            
             let newPost = { postText: text, userName: name, id: uuid() };
             let posts = this.state.posts;
             posts.unshift(newPost);
@@ -119,7 +120,8 @@ const styles = {
     backgroundColor: '#CFC7D2',
     marginLeft: '17%',
     padding: '3%'
-  }
+  },
+ 
 }
 
 export default NewsFeed;
