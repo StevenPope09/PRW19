@@ -43,6 +43,7 @@ function Watch() {
     return (
 
         <section style={styles.section}>
+        <h2 style={styles.title}>Watch List</h2>
             {watchItems.map((watchItem, index) => (
                 <WatchList key={index} index={index} watchItem={watchItem} />
             ))}
@@ -90,6 +91,12 @@ const styles = {
         fontSize: '.95em',
         color: '#000',
         
+    },
+    title: {
+        fontSize: '2.5em',
+        marginLeft: '40%',
+        marginBottom: '2.5%',
+        fontFamily: 'Times New Roman, Times, serif'
     }
 
 }
