@@ -21,7 +21,8 @@ const styles = {
         width: '20%',
         height: '40px',
         fontFamily: 'Times New Roman, Times, serif',
-        borderRadius: '40px'
+        borderRadius: '15px',
+        border: '.5px solid black',
         
         
 

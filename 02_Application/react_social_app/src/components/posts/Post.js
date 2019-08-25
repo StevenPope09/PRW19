@@ -57,14 +57,14 @@ export default Post;
 const styles = {
     post: {
         height: '100%',
-        width: '60%',
+        width: '90%',
         margin: '1%',
-        padding: '1%',
+        padding: '2%',
         backgroundColor: '#4F5165',
         
         display: 'flex',
         flexDirection: 'column',
-        marginLeft: '20%',
+        marginLeft: '3%',
         fontFamily: 'Times New Roman, Times, serif'
     },
     button: {

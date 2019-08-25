@@ -65,14 +65,14 @@ export default MyForm;
 const styles = {
     myForm: {
         height: '100%',
-        width: '60%',
+        width: '90%',
         margin: '1%',
-        padding: '1%',
+        padding: '2%',
         backgroundColor: '#A1A6B4',
         color: 'rgb(163,173,194)',
         display: 'flex',
         flexDirection: 'column',
-        marginLeft: '20%',
+        marginLeft: '3%',
         fontFamily: 'Times New Roman, Times, serif' 
     },
     mind: {
@@ -83,7 +83,10 @@ const styles = {
         height: '75px',
         width: '100%',
         fontSize: '1.50em',
-        fontFamily: 'Times New Roman, Times, serif'
+        fontFamily: 'Times New Roman, Times, serif',
+        borderRadius: '15px',
+        border: '.5px solid black',
+        paddingLeft: '7px'
 
     },
     typing: {
