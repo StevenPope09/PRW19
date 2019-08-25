@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import NewsFeed from './components/pages/NewsFeed';
 import Messages from './components/pages/Messages'
 import Watch from './components/pages/Watch';
-import Image from './images/image1.jpg'
+
 
 class App extends Component {
 
