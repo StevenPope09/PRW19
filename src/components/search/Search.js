@@ -15,6 +15,7 @@ const Search = props => {
                         onChange={props.onSearchChange}
                         style={styles.input}
                         placeholder="Search..." />
+                        {/* Remove the button */}
                     <MyBtn btnText={<FaSearch />} />
                 </div>
 

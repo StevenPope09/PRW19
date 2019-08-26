@@ -2,7 +2,11 @@ import React from 'react';
 //import MyBtn from '../buttons/MyBtn';
 import { FaTimes, FaThumbsUp, FaComment, FaShare } from 'react-icons/fa';
 
+//This should be more dynamic. So you can reuse it. Change it to a const var and use props. Pass the props to the parent.
+//Redo this so that you can use it correctly
 
+//You can import the component module from the react library. 
+//Ex. class Post extends Component {}
 class Post extends React.Component {
     render() {
         return (
@@ -19,7 +23,8 @@ class Post extends React.Component {
                     {this.props.postText}
                 </span>
                 <span >
-                    <img style={styles.image} src={this.props.postImage} />
+                    {/* Add the alt tag. Throws a warning. */}
+                    <img style={styles.image} src={this.props.postImage} alt="" />
                 </span>
                 <span style={styles.feedback}>
                     <p style={styles.pTag}><FaThumbsUp /> Like</p>
@@ -32,7 +37,6 @@ class Post extends React.Component {
             </div>
         )
     }
-
 }
 
 // const MyForm = props => {

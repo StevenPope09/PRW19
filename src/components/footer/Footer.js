@@ -4,8 +4,8 @@ import { FaHome } from 'react-icons/fa';
 const Footer = () => {
     return (
         <footer style={styles.footer}>
-            <FaHome /> Steven Pope Design & Development 2019 CS. All Rights reserved.       
-            </footer>
+            <FaHome /> Steven Pope Design & Development 2019 All Rights reserved.   
+        </footer>
     )
 }
 export default Footer

@@ -4,7 +4,8 @@ import Post from '../posts/Post'
 import uuid from 'uuid/v4'
 import Search from '../search/Search'
 import Image1 from '../../images/image1.jpg'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//Not needed
+//import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class NewsFeed extends Component {
   state = {
@@ -35,7 +36,6 @@ class NewsFeed extends Component {
 
   getPosts = () => {
     // console.log(this.state);
-
     // if search exists, return filter posts
     // otherwise return original posts 
     if (this.state.filteredPosts.length > 0) {
@@ -43,8 +43,6 @@ class NewsFeed extends Component {
 
     }
     return this.state.posts
-
-
   }
 
   //Local Storage 
@@ -53,34 +51,28 @@ class NewsFeed extends Component {
   //             this.setState({ pList })
   //             localStorage.setItem('pList', JSON.stringify(pList))
 
+
   render() {
     return (
-
-
       <div>
-
-
         <Search searchMe={(e) => {
           e.preventDefault()
           //console.log(this.state.search);
-          if (this.state.search == "") {
-            alert("Please fill this field out before you continue")
-            return
-          }
-
+          //Added extra =
+          //This is not needed for a search component
+          //You normally just search on keyup
+          // if (this.state.search === "") {
+          //   alert("Please fill this field out before you continue")
+          //   return
+          // }
+          //I would rewrite this without the button. See you can get it to work.
           let filteredPosts = this.state.posts.filter((post) => {
             return post.userName.indexOf(this.state.search) >= 0
-
           })
-
           this.setState({ filteredPosts })
-
-
         }} onSearchChange={this.onSearchChange} search={this.state.search} />
         <div style={styles.container}>
-
           <MyForm onSubmit={(text, name) => {
-            
             let newPost = { postText: text, userName: name, id: uuid() };
             let posts = this.state.posts;
             posts.unshift(newPost);
@@ -88,26 +80,23 @@ class NewsFeed extends Component {
             this.setState({ posts })
           }} />
           {this.getPosts().map((post) => {
+            //This should be its own component.
             return (
               <Post key={post.id} {...post} onDelete={(id) => {
                 //console.log(id);
                 let posts = this.state.posts
                 let filteredPosts = posts.filter((post) => {
                   return post.id !== id
-
                 })
                 //console.log(filteredPosts);
                 this.setState({ posts: filteredPosts }, () => {
                   localStorage.setItem('pList', JSON.stringify(filteredPosts))
                 })
-
-              }} />
-
+            }} />
             )
           })}
         </div>
       </div>
-
     )
   }
 }
@@ -120,8 +109,7 @@ const styles = {
     backgroundColor: '#CFC7D2',
     marginLeft: '17%',
     padding: '3%'
-  },
- 
+  }
 }
 
 export default NewsFeed;

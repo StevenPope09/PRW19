@@ -2,7 +2,10 @@ import React from 'react';
 import MyBtn from '../buttons/MyBtn';
 //import UserImage from '../../images/UserPic.png';
 
+//This should be more dynamic. So you can reuse it. Change it to a const var and use props. Pass the props to the parent.
 
+//You can import the component module from the react library. 
+//Ex. class Post extends Component {}
 class MyForm extends React.Component {
     state = { text: "" }
 
@@ -27,13 +30,14 @@ class MyForm extends React.Component {
                     
                     <MyBtn btnText="Post" onClick={(e) => {
                         e.preventDefault()
-                        if (this.state.text == "") {
+                        //Added extra =
+                        if (this.state.text === "") {
                             alert("Please fill out fields before submitting post!")
                             return
                         }
                         this.props.onSubmit(this.state.text, "Steven")
-                        this.state.text = ""
-                        
+                        //Mutating the state. You dont want to do that.
+                        //this.state.text = ""
                     }} />
                 </form>
             </div>
@@ -42,6 +46,8 @@ class MyForm extends React.Component {
     }
 
 }
+
+//You should use this form.  React is all about small components fo reusable code.
 
 // const MyForm = props => {
 //     return (

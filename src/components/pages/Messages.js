@@ -17,8 +17,10 @@ function UserMessage({ message, index }) {
     </div>
 }
 
+
+//, setMessages is not needed here. Its causing an error because nothing has been updated.
 function Messages() {
-    const [messages, setMessages] = useState([
+    const [messages] = useState([
         {
             text: 'Hey man, did you happen to get that info we need for the fire chief? He was asking for it yesterday.',
             userName: 'Cory Yaws',
@@ -45,6 +47,9 @@ function Messages() {
 
         <section style={styles.section}>
             <h2 style={styles.title}>Messages</h2>
+
+{/* // {Reuse your post component. That way you dont need to style it again} */}
+{/* //     <Posts /> */}
             {messages.map((message, index) => (
                 <UserMessage key={index} index={index} message={message} />
             ))}

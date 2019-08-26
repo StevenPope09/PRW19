@@ -15,9 +15,9 @@ function WatchList({ watchItem, index }) {
 
     </div>
 }
-
+//, setWatch is not needed here. Its causing an error because nothing has been updated.
 function Watch() {
-    const [watchItems, setWatch] = useState([
+    const [watchItems] = useState([
         {
             text: 'FLASH SALE!!! Be on the lookout for PC parts',
             watchName: '*---IBuyPower---*',
@@ -48,7 +48,8 @@ function Watch() {
                 <WatchList key={index} index={index} watchItem={watchItem} />
             ))}
 
-
+{/* // {Reuse your post component. That way you dont need to style it again} */}
+{/* //     <Posts /> */}
         </section>
 
     )

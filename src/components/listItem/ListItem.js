@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+//This should be your post component
 const ListItem = props => {
     return(
         <li key={props.id} style={styles.list}>
