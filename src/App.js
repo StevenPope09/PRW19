@@ -34,10 +34,15 @@ const styles = {
   container: {
     display: 'block',
     background: 'white',
-    backgroundSize: '50% 100%'
+    //backgroundSize: '50% 100%'
 
 
   },
+  nav: {
+    marginLeft: '5%',
+    position: 'relative',
+    bottom: '15%'
+  }
 
 
 }
