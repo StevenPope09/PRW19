@@ -1,6 +1,6 @@
 import React from 'react'
 //import MyBtn from '../buttons/MyBtn'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 class Nav extends React.Component {
@@ -21,8 +21,9 @@ const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        cursor: 'pointer'
+        cursor: 'pointer',
         
+
     },
     anchor: {
         marginBottom: '10px',
