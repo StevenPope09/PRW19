@@ -6,7 +6,9 @@ function Profile() {
         Profile
         </h1>
         <div>
-            Add a form  look at the prototype on FSO assignment.
+            <form>
+                
+            </form>
         </div>
     </div>
 }
