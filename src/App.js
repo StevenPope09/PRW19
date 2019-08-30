@@ -27,7 +27,7 @@ class App extends Component {
               <Routes />
             </Grid>  
           </Grid>
-          
+
           <div style={styles.rtContainer}>
             <Grid container spacing={12}>
               <Grid item xs={6}>
@@ -59,12 +59,13 @@ const styles = {
 
   },
   nav: {
-    marginLeft: '5%',
+    marginLeft: '3%',
+    marginTop: '3%',
     position: 'relative',
-    bottom: '-25%'
+    //bottom: '-25%'
   },
   rtContainer: {
-    marginTop: '2%'
+    marginTop: '8%'
   }
 
 
