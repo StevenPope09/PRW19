@@ -7,7 +7,7 @@ class Nav extends React.Component {
     render() {
         return (
             <nav style={styles.container}>
-                <NavLink to="/NewsFeed" style={styles.anchor}>News Feed</NavLink>
+                <NavLink to="/" style={styles.anchor}>News Feed</NavLink>
                 <NavLink to="/Messages" style={styles.anchor}>Messages</NavLink>
                 <NavLink to="/Watch" style={styles.anchor}>Watch</NavLink>
             </nav>
