@@ -9,7 +9,7 @@ const Routes = () => {
     return (
         <div>
             {/* Add a route here for when page initally loads */}
-            <Route exact path='/NewsFeed' component={NewsFeed} />
+            <Route exact path='/' component={NewsFeed} />
             <Route exact path='/Messages' component={Messages} />
             <Route exact path='/Watch' component={Watch} />
             <Route exact path='/Profile' component={Profile} />
