@@ -75,7 +75,7 @@ const styles = {
     },
     //Make it responsive
     userImg: {
-        height: '65%',
+        height: '55%',
         width: '35%',
         cursor: 'pointer'
     }
