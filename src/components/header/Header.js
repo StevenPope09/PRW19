@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../images/logo.png'
-import { FaCog, FaBell } from 'react-icons/fa';
+import { FaBell } from 'react-icons/fa';
 import UserImage from '../../images/UserPic.png';
 import {NavLink} from 'react-router-dom'
 
@@ -9,13 +9,13 @@ import {NavLink} from 'react-router-dom'
 const Header = props => {
     return (
         <header style={styles.header}>
-            <img src={logo} alt='Logo' style={styles.logo} />
+            <NavLink to="/"><img src={logo} alt='Logo' style={styles.logo} /></NavLink>
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <div style={styles.headNot}>
                 {/* It does not like whe you use picture in the alt tag.Throws a warning. */}
                 <NavLink to="/Profile"><img src={UserImage} alt="user" style={styles.userImg}/></NavLink>
                 {/* If you use the image you dont need the FaCog icon. */}
-                <NavLink to="/Profile" style={styles.anchor}><FaCog /></NavLink>
+                {/* <NavLink to="/Profile" style={styles.anchor}><FaCog /></NavLink> */}
                 <FaBell />
             </div>
         </header>
@@ -31,16 +31,19 @@ const styles = {
         color: 'black',
         width: '100%',
         backgroundColor: '#FAE1DF',
-        fontFamily: 'Times New Roman, Times, serif'
-
+        fontFamily: 'Times New Roman, Times, serif',
+        paddingTop: '15px',
+        paddingBottom: '15px',
+        
     },
     logo: {
         //Make it responsive
-        width: '70px',
-        height: '70px',
-        marginLeft: '1.5%',
+         width: '80px',
+        height: '80px',
+        padding: '2.5%',
         marginTop: '5px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        margin: '5px'
     },
     // nav: {
     //     display: 'flex',
@@ -66,12 +69,14 @@ const styles = {
     // },
     headerNot: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+       
+
     },
     //Make it responsive
     userImg: {
-        height: '45px',
-        width: '45px',
+        height: '65%',
+        width: '35%',
         cursor: 'pointer'
     }
 }
