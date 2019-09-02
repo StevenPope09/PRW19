@@ -15,7 +15,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         fontSize: '0.65em',
-        padding: '1%',
+        //padding: '1%',
         justifyContent: 'center'
     }
 }

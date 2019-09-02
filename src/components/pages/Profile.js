@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 //import Typography from '@material-ui/core/Typography';
 //import Paper from '@material-ui/core/Paper';
@@ -7,8 +6,20 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 //import avatarImage from '../../images/UserPic.png'
 import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+        // backgroundColor: theme.palette.background.paper,
+        //maxWidth: 900,
+        marginRight: 25,
+    },
+}));
 
 export default function UserProfile() {
+    const classes = useStyles();
+
     let [username, setUsername] = useState("");
     let [address, setAddress] = useState("");
     let [avatarUrl, setAvatarUrl] = useState("");
@@ -52,15 +63,11 @@ export default function UserProfile() {
 
             let zip = user.location.postcode;
             setZip(zip);
-
-
         }
-
     }, [])
 
-
     return (
-        <div>
+        <div className={classes.root}>
             <div style={styles.topBar}>Profile</div>
             <form style={styles.form}>
                 <div style={styles.userAvatarAndName}>
